@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Music and Sounds/AudioManager.gd" type="Script" id=1]
+[ext_resource path="res://Music and Sounds/Swipe.wav" type="AudioStream" id=2]
+[ext_resource path="res://Music and Sounds/EnemyDie.wav" type="AudioStream" id=3]
+[ext_resource path="res://Music and Sounds/Hit.wav" type="AudioStream" id=4]
+[ext_resource path="res://Music and Sounds/Evade.wav" type="AudioStream" id=5]
+[ext_resource path="res://Music and Sounds/Hurt.wav" type="AudioStream" id=6]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource( 1 )
+sounds = [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ) ]
+
+[node name="EnemyDie" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Evade" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Swipe" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
